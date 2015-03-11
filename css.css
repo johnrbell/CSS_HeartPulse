@@ -1,0 +1,106 @@
+@import url(http://fonts.googleapis.com/css?family=Arimo);
+@import url(http://fonts.googleapis.com/css?family=Didact+Gothic);
+
+html { 
+	font-family:Futura, Helvetica;
+	color: white;
+	background-color: #222;
+}
+html, body{
+	margin: 0px;
+	padding: 0px;
+}
+
+
+.info{
+	position: absolute;
+	z-index: 3;
+	width:100%;
+	height:200px;
+	text-align: center;
+	/*background-color: red;*/
+	top: 50%;
+}
+h1{
+	font-family: 'Didact Gothic', sans-serif;
+	margin-bottom: -10px;
+}
+p{
+	font-family: 'Arimo', sans-serif;
+	font-size: 11pt;
+	line-height: 14pt;
+}
+
+.heartcontainer{
+	width:225px;
+	height:225px;
+	position: absolute;
+	top: 35%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+
+.a{
+  bottom: 0;
+  right: -47%;
+}
+.b{
+	top: -47%;
+  left: 0;
+}
+
+.heartsolid{
+	z-index: 2;
+	position:absolute;
+	text-align: center;
+  margin-top: 25%;
+  margin-left: 23%;
+  width: 55%;
+  height: 55%;
+  border-radius: 50% 50% 50% 5%;
+  transform: rotate(-45deg);
+  transition: all 1s ease;
+}
+.heartsolid .a, .heartsolid .b{
+  content: "";
+  position: absolute;
+  height: 94%;
+  width: 94%;
+  border-radius: 50% 50% 50% 0;
+  transition: background-color 1s ease;
+}
+
+.heartbloom{
+	z-index: 1;
+	position:absolute;
+	text-align: center;
+  margin-top: 25%;
+  margin-left: 23%;
+  width: 55%;
+  height: 55%;
+  border-radius: 50% 50% 50% 5%;
+  transform: scale(1) rotate(-45deg);
+  opacity: 1;
+}
+.heartbloom .a, .heartbloom .b{
+  content: "";
+  position: absolute;
+  height: 94%;
+  width: 94%;
+  border-radius: 50% 50% 50% 0;
+}
+.bloom{
+	opacity: 0;
+	transition-property: transform,opacity;
+	transition-duration: 1s;
+	transition-timing-function: ease;
+	transform: scale(1.5) rotate(-45deg);
+}
+
+.picked{
+	background: #D30A83; /*PINK COLOR*/
+}
+.unpicked{
+	background: #CCC; /*GRAY COLOR*/
+}
