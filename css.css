@@ -68,7 +68,7 @@ p{
   height: 94%;
   width: 94%;
   border-radius: 50% 50% 50% 0;
-  transition: background-color 1s ease;
+  transition: background-color .5s ease;
 }
 
 .heartbloom{
@@ -104,3 +104,8 @@ p{
 .unpicked{
 	background: #CCC; /*GRAY COLOR*/
 }
+
+.heartsolid:hover{
+	transform: scale(1.1) rotate(-45deg);
+	transition: .5s;
+};
